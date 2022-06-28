@@ -12,8 +12,9 @@ pipeline{
         {
             steps{
                 sh "mvn build"
-            
             }
+            
+         }
             stage("Test")
             {
                 steps{
@@ -22,6 +23,6 @@ pipeline{
             }
             
 
-        }
+        
     }
 }
