@@ -37,13 +37,11 @@ pipeline{
         stage('email')
         {
             steps{
-        post{
-            always{
-                emailext body: 'Test email. Build success', subject: 'Test ', to: 'badamnikitha2@gmail.com'
+        
+                emailext body: 'Build success', mimeType: '\'text/html\'', replyTo: 'badamnikitha2@gmail.com', subject: 'test report', to: 'badamnikitha2@gmail.com'
             }
         }
-            }
-        }
+            
             
 
         
