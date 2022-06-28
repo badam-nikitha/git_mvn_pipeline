@@ -38,7 +38,7 @@ pipeline{
         {
             steps{
         
-                emailext body: 'Build success', mimeType: '\'text/html\'', replyTo: 'badamnikitha2@gmail.com', subject: 'test report', to: 'badamnikitha2@gmail.com'
+                emailext body: 'Build success', replyTo: 'badamnikitha2@gmail.com', subject: 'test report', to: 'badamnikitha2@gmail.com'
             }
         }
             
