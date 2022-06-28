@@ -1,8 +1,6 @@
 pipeline{
     agent any
-    tools{
-        maven "maven 3.6.8"
-    }
+    
     stages{
         stage("git checkout")
         {
@@ -22,13 +20,7 @@ pipeline{
                     sh "mvn test"
                 }
             }
-            stage("Deploy")
-            {
-                steps{
-                    sh "pwd"
-                    dir("target")
-                }
-            }
+            
 
         }
     }
