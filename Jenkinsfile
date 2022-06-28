@@ -34,9 +34,14 @@ pipeline{
                 sh "mvn package"
             }
         }  
+        stage('email')
+        {
+            steps{
         post{
             always{
                 emailext body: 'Test email. Build success', subject: 'Test ', to: 'badamnikitha2@gmail.com'
+            }
+        }
             }
         }
             
